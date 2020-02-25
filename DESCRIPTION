@@ -1,11 +1,21 @@
 Package: dsHelpers
 Type: Package
-Title: What the Package Does (Title Case)
+Title: dsSwissKnife helpers for specific projects - server side
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R:
+    c(person(given = "Iulian",
+             family = "Dragan",
+             role = c("aut", "cre"),
+             email = "iulian_dragan@yahoo.com"))
+Maintainer: Iulian Dragan <iulian_dragan@yahoo.com>
+Description: Specific, project-related functionality that extends dsSwissKnife.
+    This is the server package.    
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports: dsSwissKnife
+Suggests: RMySQL
+AggregateMethods: setDFdefinition,
+ resetDFdefinition
+AssignMethods: localLoadRhapsody
+RoxygenNote: 7.0.0

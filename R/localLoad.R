@@ -30,7 +30,7 @@
     x
   }))
 
-  convert.units(ret)
+  convertUnits(ret)
 }
 
 localLoadRhapsody<- function(project, tables, mysql.group = 'opal_readonly', cache = TRUE, wide.name ='wide',  value.vars = NULL , widen.formulas = list(),
@@ -100,7 +100,7 @@ localLoadRhapsody<- function(project, tables, mysql.group = 'opal_readonly', cac
 
       assign(x, tablist[[x]]$original, envir = .GlobalEnv )
     })
-    x <- join(paste0(wide.name, '_', names(tablist)), type = join.type, by = join.by)
+    x <- dsSwissKnife::join(paste0(wide.name, '_', names(tablist)), type = join.type, by = join.by)
     save(x, file='/var/lib/rserver/work/R/wdRymxdl99')
     # assign('nocache2', factor(rep(Sys.time(),10)), envir = .GlobalEnv)
 
