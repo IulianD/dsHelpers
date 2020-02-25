@@ -33,7 +33,7 @@
   convert.units(ret)
 }
 
-localLoad<- function(project, tables, mysql.group = 'opal_readonly', cache = TRUE, wide.name ='wide',  value.vars = NULL , widen.formulas = list(),
+localLoadRhapsody<- function(project, tables, mysql.group = 'opal_readonly', cache = TRUE, wide.name ='wide',  value.vars = NULL , widen.formulas = list(),
                       visit.filter = NULL, replace.levels = list() ,by.col = list(), more.cols = list(), col.to.strip = 'VISIT', join.by = NULL, join.type = 'full' ){
   tryCatch({
     if(is.null(value.vars)){
@@ -64,7 +64,7 @@ localLoad<- function(project, tables, mysql.group = 'opal_readonly', cache = TRU
       tb <- .load.table(paste0(project, '.', toupper(table)), mysql.group)
 
       if(col.to.strip %in% colnames(tb)){
-        tb <- strip.na.col(tb, col.to.strip, make.unique = TRUE, value.var = value.vars[[table]])
+        tb <- stripNaCol(tb, col.to.strip, make.unique = TRUE, value.var = value.vars[[table]])
       }
 
       if(!is.null(visit.filter)){
@@ -74,10 +74,8 @@ localLoad<- function(project, tables, mysql.group = 'opal_readonly', cache = TRU
       }
 
       if(!is.null(widen.formulas[[table]])){
-        x <- widen(tb, measure = value.vars[[table]], formula = widen.formulas[[table]], by.col = by.col[[table]],
-                   more.cols = more.cols[[table]], replace.levels = replace.levels[[table]] )
+        x <- dsSwissKnife::widen(tb, measure = value.vars[[table]], formula = widen.formulas[[table]], by.col = by.col[[table]] )
 
-        remove.na.cols(x,1000)
       } else {
         x <- tb
       }
