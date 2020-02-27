@@ -1,3 +1,5 @@
 export(setDFdefinition)
 export(resetDFdefinition)
 export(localLoadRhapsody)
+export(timeToInsulin)
+export(monotherapyNoInsulin)

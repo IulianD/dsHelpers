@@ -14,8 +14,11 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports: dsSwissKnife
-Suggests: RMySQL
+Suggests: RMySQL, 
+ sqldf
 AggregateMethods: setDFdefinition,
  resetDFdefinition
-AssignMethods: localLoadRhapsody
+AssignMethods: localLoadRhapsody,
+ timeToInsulin,
+ monotherapyNoInsulin
 RoxygenNote: 7.0.0
