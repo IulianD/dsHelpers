@@ -16,7 +16,7 @@ setDFdefinition<- function (stringsAsFactors = TRUE){
     },simplify = FALSE))
   }
   assign('data.frame', data.frame, pos = myenv)
-  return(value)
+  return(TRUE)
 }
 
 
