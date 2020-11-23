@@ -8,12 +8,15 @@ setDFdefinition<- function (stringsAsFactors = TRUE){
     args <- list(...)
     args[['stringsAsFactors']] <- stringsAsFactors
     out <- do.call(base::data.frame, args)
-    as.data.frame(sapply(out, function(x){
-      if(class(x) %in% c('Date', 'POSIXt')){
-        x <- as.character(x)
-      }
-      x
-    },simplify = FALSE))
+    if(stringsAsFactors)
+    	ret <- as.data.frame(sapply(out, function(y){
+      		if(length(intersect(class(y) , c('character', 'Date', 'POSIXct', 'POSIXlt', 'POSIXt'))) >0 ){
+        		return(factor(y))
+      		} else {
+        		return(y)
+      		}
+    	},simplify = FALSE))
+    return(ret)
   }
   assign('data.frame', data.frame, pos = myenv)
   return(TRUE)
