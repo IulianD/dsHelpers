@@ -99,4 +99,4 @@ conversionRhapsody <- structure(list(COHORT_OPAL = c("andis", "desir", "andis", 
     "(LBORRES - 2.15)*10.929", "(LBORRES - 2.15)*10.929", "(LBORRES - 2.15)*10.929")), .Names = c("COHORT_OPAL",
 "TESTCD_IN_DB", "TARGET_TESTCD", "UNIT_IN_DB", "SOURCE_UNIT",
 "TARGET_CONVERSION_FACTOR", "TARGET_UNIT", "SI_UNIT", "SI_CONVERSION_FACTOR"
-), row.names = c(NA, -66L), class = "data.frame")
+), row.names = c(NA, -67L), class = "data.frame")
