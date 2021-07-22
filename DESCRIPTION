@@ -20,5 +20,6 @@ AggregateMethods: setDFdefinition,
  resetDFdefinition
 AssignMethods: localLoadRhapsody,
  timeToInsulin,
- monotherapyNoInsulin
+ monotherapyNoInsulin,
+ convertUnits
 RoxygenNote: 7.0.0
