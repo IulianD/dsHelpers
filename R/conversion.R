@@ -7,7 +7,7 @@ conversionRhapsody <- structure(list(COHORT_OPAL = c("andis", "desir", "andis", 
 "desir", "desir", "andis", "desir", "desir", "desir", "desir",
 "desir", "desir", "dcs", "desir", "andis", "desir", "desir",
 "desir", "desir", "mdc", "abos", "abos", "ludc-gb", "ludc-gb",
-"ludc-gb", "ludc-gb", "ludc-gb", "addition-pro", "addition-dk","accelerate"
+"ludc-gb", "ludc-gb", "ludc-gb", "addition-pro", "addition-dk","i1v-mc-eian"
 ), TESTCD_IN_DB = c("CHOL", "CHOL", "CPEPTIDE", "CREAT", "CREAT",
 "CREAT", "CREAT", "CRP", "CYSTATC", "DIABP", "DIABP", "DIABP",
 "DIABP", "DIABP", "DIABP", "DIABP", "DIABP", "SYSBP", "SYSBP",
