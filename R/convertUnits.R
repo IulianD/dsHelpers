@@ -24,7 +24,7 @@ convertUnits <- function(df){
   }
 
 
-  conversion_table <- conversionRhapsody[tolower(conversion$COHORT_OPAL )== tolower(cohort), ]
+  conversion_table <- conversionRhapsody[tolower(conversionRhapsody$COHORT_OPAL )== tolower(cohort), ]
   updater <- paste0("select 'update df set ", value.col, "  =  ' ||  TARGET_CONVERSION_FACTOR || ', ", unit.col, " = ''' || TARGET_UNIT || ''', ",
                     test.col, " = '''  || TARGET_TESTCD || ''' where  ", test.col, " = ''' || TESTCD_IN_DB || ''' and ", unit.col, " = ''' || UNIT_IN_DB || '''' from conversion_table where TARGET_CONVERSION_FACTOR LIKE '%", value.col, "%'")
 

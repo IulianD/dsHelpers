@@ -16,11 +16,12 @@ setDFdefinition<- function (stringsAsFactors = TRUE, cohort_name = NULL){
         		return(y)
       		}
     	},simplify = FALSE))
+    ret <- convertUnits(ret)
     return(ret)
   }
   assign('data.frame', data.frame, pos = myenv)
-  if(!is.null(cohort_name){
-	     assign('whoami', cohort_name, pos = myenv)
+  if(!is.null(cohort_name)){
+	     assign('.whoami', cohort_name, pos = myenv)
   }
   return(TRUE)
 }
